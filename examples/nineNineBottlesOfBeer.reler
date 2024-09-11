@@ -3,7 +3,7 @@ Rel
 
     odo garrafassafarrag > 0 Rel
         reler "%garrafassafarrag% garrafas de cerveja no muro, %garrafassafarrag% garrafas de cerveja."
-        garrafassafarrag -=- 1
+        garrafassafarrag :=: garrafassafarrag - 1
         reler "Tire uma, passe adiante, %garrafassafarrag% garrafas de cerveja no muro."
     leR
 
