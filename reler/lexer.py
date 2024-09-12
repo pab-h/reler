@@ -1,4 +1,4 @@
-from reler.token import Token
+from reler.token import IdentifierNameError, Token
 from reler.token import TokenTypes
 from reler.token import MalformedTokenError
 from reler.token import UnrecognizedTokenError
@@ -41,6 +41,9 @@ class Lexer:
     def currentChar(self) -> str:
         return self.buffer[self.index]
 
+    def isPalindrome(self, name) -> bool:
+        return name == name[::-1]
+
     def identifier(self) -> Token:
         identifier = ""
 
@@ -55,6 +58,10 @@ class Lexer:
                 TokenTypes.IDENTIFIER
             )
         )
+
+        if token.type == TokenTypes.IDENTIFIER:
+            if not self.isPalindrome(token.value):
+                raise IdentifierNameError(f"identifier { token.value } is not a Palindrome!")
 
         return token
 

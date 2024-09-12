@@ -7,6 +7,9 @@ class UnrecognizedTokenError(Exception):
 class MalformedTokenError(Exception):
     pass
 
+class IdentifierNameError(Exception):
+    pass
+
 class TokenTypes(Enum):
     REL = auto()
     LER = auto()
