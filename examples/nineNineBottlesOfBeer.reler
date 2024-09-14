@@ -1,0 +1,12 @@
+Rel
+    garrafasafarrag :=: 99
+
+    odo garrafassafarrag > 0 Rel
+        reler "%garrafassafarrag% garrafas de cerveja no muro, %garrafassafarrag% garrafas de cerveja."
+        garrafassafarrag :=: garrafassafarrag - 1
+        reler "Tire uma, passe adiante, %garrafassafarrag% garrafas de cerveja no muro."
+    leR
+
+    reler "Nenhuma garrafa de cerveja no muro, nenhuma garrafa de cerveja."
+    reler "Vá à loja e compre mais, 99 garrafas de cerveja no muro."
+leR
