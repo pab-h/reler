@@ -1,5 +1,5 @@
 Rel
-    garrafasafarrag :=: 99
+    garrafassafarrag :=: 99
 
     odo garrafassafarrag > 0 Rel
         reler "%garrafassafarrag% garrafas de cerveja no muro, %garrafassafarrag% garrafas de cerveja."
