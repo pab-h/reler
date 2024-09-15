@@ -1,15 +1,7 @@
-from reler.token import Token
-from reler.token import TokenTypes
+from reler.analysis.token import Token
+from reler.analysis.token import TokenTypes
 
-from reler.ast import AST
-from reler.ast import CompoundNode
-from reler.ast import AssignNode
-from reler.ast import BinaryOperationNode
-from reler.ast import UnaryOperationNode
-from reler.ast import OdoNode
-from reler.ast import EseNode
-from reler.ast import ValueNode
-
+from reler.analysis.ast import *
 
 class Parser:
     def __init__(self) -> None:
@@ -41,7 +33,7 @@ class Parser:
             
             return UnaryOperationNode(
                 operator,
-                identifier
+                IdentifierNode(identifier)
             )
 
         identifier = self.currentToken()
@@ -55,8 +47,8 @@ class Parser:
 
         return BinaryOperationNode(
             operator,
-            identifier,
-            number
+            IdentifierNode(identifier),
+            ValueNode(number)
         )
 
     def odo(self) -> OdoNode:
@@ -90,7 +82,7 @@ class Parser:
 
         return UnaryOperationNode(
             operator,
-            literal
+            ValueNode(literal)
         )
 
     def assign(self) -> AssignNode:
@@ -131,8 +123,8 @@ class Parser:
                 identifier,
                 BinaryOperationNode(
                     operator,
-                    lastIdentifier,
-                    value
+                    IdentifierNode(lastIdentifier),
+                    ValueNode(value)
                 )
             )
 

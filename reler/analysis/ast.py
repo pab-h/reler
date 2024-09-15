@@ -1,7 +1,7 @@
 from enum import Enum
 from enum import auto
 
-from reler.token import Token
+from reler.analysis.token import Token
 
 class ASTType(Enum):
     ABSTRACT = auto()
