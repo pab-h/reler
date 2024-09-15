@@ -1,14 +1,14 @@
-from reler.token import Token
-from reler.token import TokenTypes
+from reler.analysis.token import Token
+from reler.analysis.token import TokenTypes
 
-from reler.ast import AST
-from reler.ast import CompoundNode
-from reler.ast import AssignNode
-from reler.ast import BinaryOperationNode
-from reler.ast import UnaryOperationNode
-from reler.ast import OdoNode
-from reler.ast import EseNode
-from reler.ast import ValueNode
+from reler.analysis.ast import AST
+from reler.analysis.ast import CompoundNode
+from reler.analysis.ast import AssignNode
+from reler.analysis.ast import BinaryOperationNode
+from reler.analysis.ast import UnaryOperationNode
+from reler.analysis.ast import OdoNode
+from reler.analysis.ast import EseNode
+from reler.analysis.ast import ValueNode
 
 
 class Parser:

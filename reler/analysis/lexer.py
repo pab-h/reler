@@ -1,7 +1,7 @@
-from reler.token import IdentifierNameError, Token
-from reler.token import TokenTypes
-from reler.token import MalformedTokenError
-from reler.token import UnrecognizedTokenError
+from reler.analysis.token import IdentifierNameError, Token
+from reler.analysis.token import TokenTypes
+from reler.analysis.token import MalformedTokenError
+from reler.analysis.token import UnrecognizedTokenError
 
 class Lexer:
     def __init__(self) -> None:
